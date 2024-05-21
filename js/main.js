@@ -15,7 +15,6 @@ constants.btnLogout.addEventListener('click', () => {
 const userLog = localStorage.getItem('user');
 
 if (userLog) {
-    console.log("toto")
     const user = JSON.parse(userLog);
     auth(user.username, user.password);
 }

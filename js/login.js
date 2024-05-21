@@ -39,11 +39,10 @@ export function auth (username, password) {
         if(!response.ok){
             if(response.status === 401) {
                 alert('Invalid username or password');
-                return
             }else{
                 alert('An error has occured');
-                return
-            }           
+            }       
+            throw new Error(`Erreur : ${response.status}`);    
         }
         console.log("🚀 ~ auth ~ response:", response)
         //? Return response as json if no err
