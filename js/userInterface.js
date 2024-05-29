@@ -4,8 +4,8 @@ export function displayUserInfo(data) {
   constants.loginSection.style.display = "none";
   constants.userPage.style.display = "block";
 
+  constants.firstname.innerText = data.data.user[0].firstName;
   constants.lastName.innerText = data.data.user[0].lastName;
-  constants.firstName.innerText = data.data.user[0].firstName;
   constants.email.innerText = data.data.user[0].email;
   constants.adresse.innerText =
     data.data.user[0].attrs.addressStreet +
